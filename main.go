@@ -1,6 +1,7 @@
 package main
 
 import (
+	"myapp/configs"
 	"myapp/routes"
 
 	"github.com/gofiber/fiber/v2"
@@ -8,6 +9,7 @@ import (
 
 func main(){
 	app:=fiber.New()
+	configs.ConnectDatabase()
 	routes.UserRoute(app)
 	app.Listen(":3000")
 }
