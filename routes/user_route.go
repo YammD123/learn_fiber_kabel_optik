@@ -10,4 +10,5 @@ func UserRoute(app *fiber.App) {
 	user:=app.Group("/user")
 
 	user.Get("/",controllers.GetAllUsers)
+	user.Post("/",controllers.CreateUser)
 }
